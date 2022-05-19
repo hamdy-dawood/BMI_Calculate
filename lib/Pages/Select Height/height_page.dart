@@ -2,24 +2,59 @@ import 'dart:math';
 import 'package:bmi_calculator/Constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:height_slider/height_slider.dart';
-
+import '../../Drawer/drawer.dart';
 import '../BMI Calculate/bmi_result.dart';
 import '../BMI Calculate/result_page.dart';
 
-class SelectedHeight extends StatefulWidget {
-  const SelectedHeight({Key? key, required this.weight}) : super(key: key);
+class HeightPage extends StatefulWidget {
+  const HeightPage({Key? key, required this.weight}) : super(key: key);
   final double weight ;
 
   @override
-  State<SelectedHeight> createState() => _SelectedHeightState();
+  State<HeightPage> createState() => _HeightPageState();
 }
 
-class _SelectedHeightState extends State<SelectedHeight> {
+class _HeightPageState extends State<HeightPage> {
   int height = 160;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        leadingWidth: 30.0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () => Scaffold.of(context).openDrawer(),
+              icon: SizedBox(
+                height: 30.0,
+                width: 30.0,
+                child: Image.asset(
+                  "assets/icons/list.png",
+                  fit: BoxFit.fill,
+                  color: Colors.black,
+                ),
+              ),
+            );
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: SizedBox(
+                height: 25.0,
+                width: 25.0,
+                child: Image.asset(
+                  "assets/icons/bell.png",
+                  color: Colors.black,
+                )),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      drawer: MainDrawer(),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(
@@ -37,7 +72,7 @@ class _SelectedHeightState extends State<SelectedHeight> {
                 height: 30,
               ),
               SizedBox(
-                height: 500,
+                height: 450,
                 child: HeightSlider(
                   height: height,
                   onChange: (val) => setState(() => height = val),
@@ -51,7 +86,7 @@ class _SelectedHeightState extends State<SelectedHeight> {
                 ),
               ),
               const SizedBox(
-                height: 40,
+                height: 40
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 75.0),

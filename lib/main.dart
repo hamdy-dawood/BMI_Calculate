@@ -1,30 +1,20 @@
+import 'package:bmi_calculator/auth/main_page.dart';
 import 'package:flutter/material.dart';
-import 'package:device_preview/device_preview.dart';
-import 'Splash Screen/splash_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
-  runApp(
-    DevicePreview(
-      enabled: true,
-      tools: [
-        ...DevicePreview.defaultTools,
-      ],
-      builder: (context) => BMI(),
-    ),
-  );
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp();
+  runApp(const BMI());
 }
+class BMI extends StatelessWidget {
+  const BMI({Key? key}) : super(key: key);
 
-class BMI extends StatefulWidget {
-  @override
-  _State createState() => _State();
-}
-
-class _State extends State<BMI> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Spalsh_Screen(),
+      home: MainPage(),
     );
   }
 }

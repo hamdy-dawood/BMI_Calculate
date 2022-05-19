@@ -1,6 +1,7 @@
 import 'package:bmi_calculator/Pages/Select%20Height/height_page.dart';
 import 'package:flutter/material.dart';
 import '../../Constants/constants.dart';
+import '../../Drawer/drawer.dart';
 import '../Select Height/height_page.dart';
 
 class SelectWeight extends StatefulWidget {
@@ -17,6 +18,40 @@ class _SelectWeightState extends State<SelectWeight> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        leadingWidth: 30.0,
+        backgroundColor: Colors.white,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () => Scaffold.of(context).openDrawer(),
+              icon: SizedBox(
+                height: 30.0,
+                width: 30.0,
+                child: Image.asset(
+                  "assets/icons/list.png",
+                  fit: BoxFit.fill,
+                  color: Colors.black,
+                ),
+              ),
+            );
+          },
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: SizedBox(
+                height: 25.0,
+                width: 25.0,
+                child: Image.asset(
+                  "assets/icons/bell.png",
+                  color: Colors.black,
+                )),
+            onPressed: () {},
+          ),
+        ],
+      ),
+      drawer: MainDrawer(),
       body:Padding(
         padding: const EdgeInsets.all(15.0),
         child: Center(
@@ -103,7 +138,7 @@ class _SelectWeightState extends State<SelectWeight> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>   SelectedHeight(weight:Weight),
+                          builder: (context) => HeightPage(weight:Weight),
                         ));
                   },
                   child: Container(
