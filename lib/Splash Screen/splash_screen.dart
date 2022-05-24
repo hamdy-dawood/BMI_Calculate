@@ -1,7 +1,8 @@
 import 'package:bmi_calculator/Constants/constants.dart';
-import 'package:bmi_calculator/Pages/Select%20Gender/gender_page.dart';
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
+import '../main.dart';
+
 
 class Spalsh_Screen extends StatefulWidget {
   const Spalsh_Screen({Key? key}) : super(key: key);
@@ -17,9 +18,9 @@ class _Spalsh_ScreenState extends State<Spalsh_Screen> {
   }
 
   _navigatetohome() async {
-    await Future.delayed(const Duration(milliseconds: 7000), () {});
+    await Future.delayed(const Duration(milliseconds: 5000), () {});
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) =>const SelectGender()));
+        context, MaterialPageRoute(builder: (context) => MainPage()));
   }
 
   @override
@@ -42,7 +43,7 @@ class _Spalsh_ScreenState extends State<Spalsh_Screen> {
                   const SizedBox(
                     height: 250,
                   ),
-                  LoadingAnimationWidget.inkDrop(color: MainColor, size: 50),
+                  LoadingAnimationWidget.inkDrop(color: mainColor, size: 50),
                 ],
               ),
             ),

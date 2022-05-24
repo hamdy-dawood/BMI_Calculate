@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:bmi_calculator/Pages/Select%20Gender/gender_page.dart';
 import 'package:flutter/material.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -60,7 +59,7 @@ class ResultPage extends StatelessWidget {
               const Text(
                 'YOUR BMI',
                 style: TextStyle(
-                    color: MainColor,
+                    color: mainColor,
                     fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
@@ -91,10 +90,10 @@ class ResultPage extends StatelessWidget {
                       style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 35.0,
-                          color: MainColor),
+                          color: mainColor),
                     ),
                     circularStrokeCap: CircularStrokeCap.round,
-                    progressColor: MainColor,
+                    progressColor: mainColor,
                     backgroundColor: active,
                   ),
                 ),
@@ -110,21 +109,24 @@ class ResultPage extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.grey,
                         fontSize: 20,
-                        fontWeight: FontWeight.normal),
+                        fontWeight: FontWeight.normal,
+                        overflow: TextOverflow.ellipsis),
                   ),
                   Text(
                     bmi!,
                     style: const TextStyle(
-                        color: MainColor,
+                        color: mainColor,
                         fontSize: 30,
-                        fontWeight: FontWeight.bold),
+                        fontWeight: FontWeight.bold,
+                        overflow: TextOverflow.ellipsis),
                   ),
                   const Text(
                     'weight!',
                     style: TextStyle(
                         color: Colors.grey,
                         fontSize: 20,
-                        fontWeight: FontWeight.normal),
+                        fontWeight: FontWeight.normal,
+                        overflow: TextOverflow.ellipsis),
                   ),
                 ],
               ),
@@ -134,7 +136,7 @@ class ResultPage extends StatelessWidget {
               Center(
                   child: Text(
                 description!,
-                style: const TextStyle(color:MainColor, fontSize: 25,height: 1.5),
+                style: const TextStyle(color:mainColor, fontSize: 25,height: 1.5),
               )),
               const SizedBox(
                 height: 30,
@@ -159,7 +161,7 @@ class ResultPage extends StatelessWidget {
                         ),
                         child: const Icon(
                           FontAwesomeIcons.solidBookmark,
-                          color: MainColor,
+                          color: mainColor,
                           size: 25.0,
                         ),
                       ),
@@ -190,7 +192,7 @@ class ResultPage extends StatelessWidget {
                         ),
                         child: const Icon(
                           FontAwesomeIcons.house,
-                          color: MainColor,
+                          color: mainColor,
                           size: 40.0,
                         ),
                       ),
@@ -214,7 +216,7 @@ class ResultPage extends StatelessWidget {
                         ),
                         child: const Icon(
                           FontAwesomeIcons.share,
-                          color: MainColor,
+                          color: mainColor,
                           size: 25.0,
                         ),
                       ),

@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:bmi_calculator/Constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:height_slider/height_slider.dart';
@@ -64,7 +63,7 @@ class _HeightPageState extends State<HeightPage> {
               const Text(
                 'What is your Height ?',
                 style: TextStyle(
-                    color: MainColor,
+                    color: mainColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -79,8 +78,8 @@ class _HeightPageState extends State<HeightPage> {
                   unit: 'cm',
                   maxHeight: 200,
                   minHeight: 130,
-                  primaryColor: MainColor,
-                  sliderCircleColor: MainColor,
+                  primaryColor: mainColor,
+                  sliderCircleColor: mainColor,
                   numberLineColor: Colors.black,
                   currentHeightTextColor: Colors.black,
                 ),
@@ -104,7 +103,7 @@ class _HeightPageState extends State<HeightPage> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: MainColor,
+                      color: mainColor,
                     ),
                     child: const Center(
                         child: Text(

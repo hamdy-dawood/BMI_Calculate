@@ -61,7 +61,7 @@ class _SelectWeightState extends State<SelectWeight> {
               const Text(
                 'What is your weight ?',
                 style: TextStyle(
-                    color: MainColor,
+                    color: mainColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold
                 ),
@@ -101,7 +101,7 @@ class _SelectWeightState extends State<SelectWeight> {
                             ),
                             const Text(
                               'kg',
-                              style: TextStyle(fontSize: 20, color: MainColor),
+                              style: TextStyle(fontSize: 20, color: mainColor),
                             ),
                           ],
                         ),
@@ -111,7 +111,7 @@ class _SelectWeightState extends State<SelectWeight> {
                         Slider(
                           max: 150,
                           min: 40,
-                          activeColor: MainColor,
+                          activeColor: mainColor,
                           inactiveColor: active,
                           value: Weight,
                           onChanged: (value) {
@@ -146,7 +146,7 @@ class _SelectWeightState extends State<SelectWeight> {
                     width: double.infinity,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: MainColor,
+                      color: mainColor,
                     ),
                     child: const Center(
                         child: Text(

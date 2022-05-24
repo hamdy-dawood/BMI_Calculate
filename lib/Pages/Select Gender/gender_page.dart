@@ -64,7 +64,7 @@ class _SelectGenderState extends State<SelectGender> {
                 const Text(
                   'Select your Gender !',
                   style: TextStyle(
-                      color: MainColor,
+                      color: mainColor,
                       fontSize: 25,
                       fontWeight: FontWeight.bold),
                 ),
@@ -84,7 +84,7 @@ class _SelectGenderState extends State<SelectGender> {
                           height: 250,
                           decoration: BoxDecoration(
                               color: g == Gender.Male ? active : inactive,
-                              border: Border.all(color: MainColor, width: 2.0),
+                              border: Border.all(color: mainColor, width: 2.0),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +125,7 @@ class _SelectGenderState extends State<SelectGender> {
                           height: 250,
                           decoration: BoxDecoration(
                               color: g == Gender.Female ? active : inactive,
-                              border: Border.all(color: MainColor, width: 2.0),
+                              border: Border.all(color: mainColor, width: 2.0),
                               borderRadius: BorderRadius.circular(15)),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -172,7 +172,7 @@ class _SelectGenderState extends State<SelectGender> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        color: MainColor,
+                        color: mainColor,
                       ),
                       child: const Center(
                           child: Text(
