@@ -88,8 +88,15 @@ class MainDrawer extends StatelessWidget {
                   buildMenuItem(
                       text: 'Log out',
                       icon: Icons.logout,
-                      onClicked: ()=> FirebaseAuth.instance.signOut(),
-                      ),
+                     onClicked: () {
+                        //sign out
+                        FirebaseAuth.instance.signOut();
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const AuthPage(),
+                            ));
+                      }),
                 ],
               ),
             ),
