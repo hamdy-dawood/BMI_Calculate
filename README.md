@@ -1,4 +1,4 @@
-# BMI Calculator App
+# BMI Calculator App - Flutter with FireBase
 
 In the Project you can select your height and your weight to calculate your BMI and know what you do in your body to be Perfect ,
 you can login in app with firebase.
