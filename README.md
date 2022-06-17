@@ -1,6 +1,7 @@
 # BMI Calculator App
 
-In the Project you can select your height and your weight to calculate your BMI and know what you do in your body to be Perfect .
+In the Project you can select your height and your weight to calculate your BMI and know what you do in your body to be Perfect ,
+you can login in app with firebase.
 
 ## Video Preview of Final UI
 
